@@ -1,7 +1,6 @@
 import { useEffect, useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import logger from 'use-reducer-logger';
 // import data from '../data';
 
 const reducer = (state, action) => {
@@ -18,7 +17,7 @@ const reducer = (state, action) => {
 };
 
 function HomeScreen() {
-  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
+  const [{ loading, error, products }, dispatch] = useReducer(reducer, {
     products: [],
     loading: true,
     error: '',
@@ -43,7 +42,7 @@ function HomeScreen() {
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
-          <div>{error}</div>
+          <div>Loading...</div>
         ) : error ? (
           <div>{error}</div>
         ) : (
@@ -68,5 +67,4 @@ function HomeScreen() {
     </div>
   );
 }
-
 export default HomeScreen;

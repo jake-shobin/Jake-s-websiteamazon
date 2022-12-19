@@ -24,3 +24,6 @@
    11. return products
    12. run npm start
 7. Fetch products from backend
+8. Add bootstrap UI framework
+   1. npm install react-bootstrap bootstrap
+   2. update App.js
