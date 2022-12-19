@@ -23,3 +23,4 @@
    10. Create route for /api/products
    11. return products
    12. run npm start
+7. Fetch products from backend
